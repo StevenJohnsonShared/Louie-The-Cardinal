@@ -17,5 +17,9 @@ async def on_ready():
 async def on_message(message):
     await client.process_commands(message)
 
+@client.command(name="hi-louie")
+async def hello(context):
+    await context.message.channel.send("hi")
+
 
 client.run(os.environ['token'])
