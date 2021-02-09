@@ -21,5 +21,8 @@ async def on_message(message):
 async def hello(context):
     await context.message.channel.send("hi")
 
+@client.command(name='ping')
+async def ping(context):
+    await context.message.channel.send("ping")
 
 client.run(os.environ['token'])
