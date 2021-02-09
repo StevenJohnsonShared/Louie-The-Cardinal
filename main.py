@@ -11,6 +11,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('--------')
+    print("hi")
 
 @client.event
 async def on_message(message):
