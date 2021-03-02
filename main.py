@@ -49,10 +49,10 @@ async def deleteMessages(context):
 @client.command(name='move')
 async def move(context):
 
-    if "Officer" not in [y.name.lower() for y in context.message.author.roles]:
-        await context.message.delete()
-        await context.channel.send("{} you do not have the permissions to move messages.".format(context.message.author))
-        return
+    # if "Officer" not in [y.name.lower() for y in context.message.author.roles]:
+    #     await context.message.delete()
+    #     await context.channel.send("{} you do not have the permissions to move messages.".format(context.message.author))
+    #     return
 
     # get the content of the message
     content = context.message.content.split(' ')
