@@ -42,29 +42,8 @@ async def deleteMessages(context):
     # For each message fetched, delete.
     for messages in fetchedMessages:
         await messages.delete()
-
-# Delete Messages: !deleteMessages {number of messages}
-# used to delete specific number of messages.
-@client.command(name='deleteMessages')
-async def deleteMessages(context):
-    # get the content of the message and split the parameters from the command.
-    content = context.message.content.split(' ')
-
-    # If the length of the message is not two or the parameter is not numeric
-    # then the command is not used correctly.
-    if len(content) != 2 or not content[1].isnumeric():
-        await context.message.channel.send("Incorrect usage of !deleteMessage. Example: !deleteMessage {number of messages}.")
-        return
-
-    # Get the channel that the message was sent in.
-    channel = context.message.channel
-    # Get the number of messages specified from the channel the message was sent in.
-    fetchedMessages = await channel.history(limit=int(content[1])+1).flatten()
-
-    # For each message fetched, delete.
-    for messages in fetchedMessages:
-        await messages.delete()
     
+
 # Move: !move {channel to move to} {number of messages}
 # Used to move messages from one channel to another.
 @client.command(name='move')
