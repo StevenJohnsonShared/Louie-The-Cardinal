@@ -429,4 +429,4 @@ async def vote(ctx, question, *options):
 
 
 # Server
-# client.run(os.environ['token'])
+client.run(os.environ['token'])
