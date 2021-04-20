@@ -430,7 +430,3 @@ async def vote(ctx, question, *options):
 
 # Server
 # client.run(os.environ['token'])
-# My test bot
-client.run('ODMwNDU2NTA4MzE0ODEyNDQ2.YHG85A.nIaicdzZGjOOTAk4-P_PCYD5MEo')
-# Louie
-# client.run('ODA4NTEzMTYyODY4NDI0NzA0.YCHojw.g0w0z6ToLc_1tHmWFrqFqafvcR8')
